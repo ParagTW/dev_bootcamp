@@ -19,10 +19,18 @@ public class ItemController {
     @Autowired
     private ItemRepository itemRepository;
 
+    public ItemController(ItemRepository itemRepository) {
+        this.itemRepository = itemRepository;
+    }
+
+    public ItemController(){
+
+    }
+
     @RequestMapping("/Item")
     public String getItems(Model model)
     {
-        System.out.print("testing");
+//        System.out.print("testing");
         model.addAttribute("name", "abcd");
         model.addAttribute("itemList",itemRepository.getItems());
             return "ListView";

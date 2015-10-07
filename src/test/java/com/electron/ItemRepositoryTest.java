@@ -15,11 +15,4 @@ public class ItemRepositoryTest {
         assertEquals(itemList.size(),3);
     }
 
-    @Test
-    public void someTestName1(){
-        ItemController itemController = new ItemController();
-        itemController.getItems(null);
-//        List<Item> itemList = itemListrepository.getItems();
-//        assertEquals(itemList.size(),3);
-    }
 }

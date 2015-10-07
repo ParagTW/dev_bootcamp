@@ -6,8 +6,23 @@
 </head>
 <body>
 <p th:text="'Hello, ' + ${name} + '!'" />
+
 <p th:each="item : ${itemList}"
    th:text="${item.name}">Items List</p>
+
+<table border="2" align="center" width="300">
+    <tr>
+        <th>NAME</th>
+        <th>PRICE</th>
+        <th>SELECTION</th>
+    </tr>
+    <tr th:each="item : ${itemList}">
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.price}"></td>
+        <td align="center"><input type = "checkbox" align="center"/></td>
+    </tr>
+</table>
+<input type = "SUBMIT" align="center" name="Add to Cart"/>
 </body>
 </html>
 
